@@ -1,5 +1,6 @@
 import React from 'react';
 import { FilterType } from '../../types';
+import FilterButton from '../FilterButton';
 
 import './styles.scss';
 
@@ -12,13 +13,7 @@ export function Filters({ filters }: Props) {
     <div className="filters">
       <p>Сортировка: </p>
       {filters.map((filter, index) => (
-        <div className="btn-container">
-          <button
-            className="filter-btn"
-            key={index}>
-            {filter.name}
-          </button>
-        </div>
+        <FilterButton filter={filter} key={index} />
       ))}
     </div>
   )
