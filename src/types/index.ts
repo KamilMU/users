@@ -23,4 +23,6 @@ export interface ParamTypes {
 
 export interface FilterType {
   name: string;
+  userFieldName1: string;
+  userFieldName2: string;
 }

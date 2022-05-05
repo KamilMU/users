@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Filters from '../../components/Filters';
+import Filters from '../Filters';
 
 import './styles.scss';
 
 const filters = [
-  { name: 'по городу' },
-  { name: 'по компании' },
+  { name: 'по городу', userFieldName1: 'address', userFieldName2: 'city' },
+  { name: 'по компании', userFieldName1: 'company', userFieldName2: 'name'  },
 ];
 
 export function Sidebar() {

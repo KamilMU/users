@@ -14,9 +14,10 @@ export function rootReducer(state = initialState, action) {
     case FILTER_USERS_BY_FIELD:
       return {
         ...state,
-        users: state.users.sort((a, b) => {
-          return a[action.field] - b[action.field]
-        })
+        users: [...state.users.sort((a, b) => {
+          return a[action.userFieldName1][action.userFieldName2]
+            .localeCompare(b[action.userFieldName1][action.userFieldName2])
+        })]
       }
     default:
       return state;

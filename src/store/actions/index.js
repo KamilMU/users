@@ -9,7 +9,8 @@ export const fetchUsers = () => async dispatch => {
   dispatch({ type: FETCH_USERS, payload: response.data })
 }
 
-export const filterUsersByField = (userField) => ({
+export const filterUsersByField = (userFieldName1, userFieldName2) => ({
   type: FILTER_USERS_BY_FIELD,
-  userField
+  userFieldName1,
+  userFieldName2
 })
