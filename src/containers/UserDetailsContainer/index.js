@@ -1,0 +1,1 @@
+export { UserDetailsContainer as default } from './UserDetailsContainer';

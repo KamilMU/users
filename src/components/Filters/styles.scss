@@ -1,0 +1,34 @@
+.filters {
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    
+    color: #000000;
+  }
+
+  .btn-container {
+    & + .btn-container {
+      margin-top: 15px;
+    }
+
+    .filter-btn {
+      padding: 5px 15px;
+      background: #4B51EF;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 12px;
+      white-space: nowrap;
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

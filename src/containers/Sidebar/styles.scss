@@ -1,0 +1,14 @@
+.sidebar {
+  height: auto;
+  background: #BDBDBD;
+
+  @media (max-width: 460px) {
+    padding: 35px 6px;
+  }
+
+  @media (min-width: 461px) {
+    padding-top: 35px;
+    padding-right: 63px;
+    padding-left: 20px;
+  }
+}
