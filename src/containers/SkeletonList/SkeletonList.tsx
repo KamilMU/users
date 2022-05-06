@@ -1,14 +1,12 @@
 import React from 'react';
-import Skeleton from '../../components/Skeleton/Skeleton';
+import Skeleton from '../../components/Skeleton';
 
-function SkeletonList() {
+export function SkeletonList() {
   return (
     <>
-      {Array(10).map((skeleton, index) => (
+      {Array(10).fill(10).map((skeleton, index) => (
         <Skeleton key={index} />
       ))}
     </>
   )
-}
-
-export default SkeletonList;
+};

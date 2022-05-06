@@ -1,5 +1,6 @@
 .sidebar {
-  height: auto;
+
+  overflow-y: auto;
   background: #BDBDBD;
 
   @media (max-width: 460px) {

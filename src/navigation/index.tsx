@@ -8,8 +8,8 @@ import Users from '../containers/Users';
 export const navigation = (
   <Router>
     <Switch>
-      <Route path="/" component={Users} />
-      <Route path="/pokemon/:id" component={UserDetailsContainer} />
+      <Route exact path="/" component={Users} />
+      <Route path="/user/:id" component={UserDetailsContainer} />
       <Route path="*" component={PageNotFound} />
     </Switch>
   </Router>
