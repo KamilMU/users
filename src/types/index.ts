@@ -1,13 +1,19 @@
 export interface Adress {
-  city: string;
+  city: string,
+  street: string,
+  zipcode: string,
 }
 
 export interface Company {
-  name: string;
+  name: string
 }
 
 export interface UserType {
   id: number,
+  phone: string,
+  website: string,
+  username: string,
+  email: string,
   name: string,
   address: Adress,
   company: Company,

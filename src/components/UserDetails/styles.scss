@@ -4,4 +4,24 @@
   border-radius: 8px;
   padding: 20px 12px;
   width: 100%;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__button {
+    background: #4B51EF;
+    border-radius: 5px;
+    padding: 6px 11px;
+    outline: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }
