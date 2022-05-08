@@ -16,15 +16,16 @@ export function UserDetailsContainer<IState>() {
   const { id } = useParams<ParamTypes>();
   const users = useSelector((state: IRootState) => state.users);
   const user = users.find(user => user.id === parseInt(id));
-  console.log(user, 'u');
+  console.log(users, 'ussssssssss');
   
   function setOnEdit() {
     setIsEditButtonClicked(true);
   }
   
-  function handleSubmit(e:any) {
-    e.preventDefault();
-    console.log(JSON.stringify(user)); 
+  function handleSubmit(values: Object) {
+    if (!values) {
+      return console.log(JSON.stringify(user)); 
+    }
   }
 
   return (

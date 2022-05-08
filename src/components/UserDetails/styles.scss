@@ -1,18 +1,25 @@
 .user-profile {
   background: #FFFFFF;
-  border: 1px solid #F3F3F3;
-  border-radius: 8px;
-  padding: 20px 12px;
   width: 100%;
+
+  .form-fields {
+    border: 1px solid #F3F3F3;
+    padding: 20px 12px;
+    border-radius: 8px;
+  }
 
   &__row {
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 11px;
   }
 
   &__button {
     background: #4B51EF;
+    margin-top: 10px;
+    float: right;
     border-radius: 5px;
     padding: 6px 11px;
     outline: none;
@@ -23,5 +30,20 @@
     &:hover {
       opacity: .8;
     }
+  }
+
+  .disabled-btn {
+    background: #b1b1b1;
+    margin-top: 10px;
+    float: right;
+    border-radius: 5px;
+    padding: 6px 11px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: none;
+  }
+
+  .nested-error {
+    color: red;
   }
 }

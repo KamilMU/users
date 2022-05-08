@@ -9,7 +9,7 @@ export function rootReducer(state = initialState, action) {
     case FETCH_USERS:
       return {
         ...state,
-        users: [...state.users, ...action.payload]
+        users: action.payload
       }
     case FILTER_USERS_BY_FIELD:
       return {
@@ -27,6 +27,7 @@ export function rootReducer(state = initialState, action) {
             return {
               ...user,
               [action.userFieldName]: {
+                ...user[action.userFieldName],
                 [action.userFieldName2]: action.inputValue
               }
             }
