@@ -14,7 +14,6 @@ interface Props {
 export function InputContainer({ label, value, isEditButtonClicked, userFieldName, userFieldName2 }: Props) {
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
-  console.log(value, '1');
   
   useEffect(() => {
     dispatch(changeUserInfo(userFieldName, userFieldName2, inputValue))
@@ -29,8 +28,6 @@ export function InputContainer({ label, value, isEditButtonClicked, userFieldNam
   return <Input
     label={label}
     value={inputValue}
-    userFieldName={userFieldName}
-    userFieldName2={userFieldName2}
     isEditButtonClicked={isEditButtonClicked}
     changeInputValue={(e) => {
       setInputValue(e.target.value);
