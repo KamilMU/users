@@ -2,8 +2,7 @@ import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect, useParams } from 'react-router-dom';
 import UserDetails from '../../components/UserDetails';
-import { changeUserInfo } from '../../store/actions';
-import { IRootState, ParamTypes } from '../../types';
+import { IRootState, ParamTypes, UserType } from '../../types';
 
 import './styles.scss';
 
@@ -12,25 +11,27 @@ interface IState {
 }
 
 export function UserDetailsContainer<IState>() {
-  const [isEditButtonClicked, setIsEditButtonClicked] = React.useState(false);
   const { id } = useParams<ParamTypes>();
   const users = useSelector((state: IRootState) => state.users);
   const user = users.find(user => user.id === parseInt(id));
-  console.log(users, 'ussssssssss');
+  const [isEditButtonClicked, setIsEditButtonClicked] = React.useState(false);
 
   function setOnEdit() {
     setIsEditButtonClicked(true);
   }
 
-  function handleSubmit() {
-    console.log(JSON.stringify(user));
+  function handleSubmit(values: UserType) {
+    setTimeout(() => console.log(JSON.stringify(values)), 0);
   }
 
   return (
     <div className="profile">
       {user ? (
         <UserDetails
-          user={user}
+          user={{ 
+            ...user,
+            comment: ''
+          }}
           setOnEdit={setOnEdit}
           isEditButtonClicked={isEditButtonClicked}
           handleSubmit={handleSubmit}

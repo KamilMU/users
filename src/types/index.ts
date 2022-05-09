@@ -17,6 +17,7 @@ export interface UserType {
   name: string,
   address: Adress,
   company: Company,
+  comment: string
 }
 
 export interface IRootState {
