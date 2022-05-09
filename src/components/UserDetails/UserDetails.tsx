@@ -40,68 +40,68 @@ export function UserDetails({
                 label="Name"
                 value={values.name}
                 name="name"
+                error={errors.name}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.name && <div className="error">{errors.name}</div>}
               <Input
                 label="User name"
                 value={values.username}
                 name="username"
+                error={errors.username}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.username && <div className="error">{errors.username}</div>}
               <Input
                 label="Email"
                 value={values.email}
                 name="email"
+                error={errors.email}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.email && <div className="error">{errors.email}</div>}
               <Input
                 label="Street"
                 value={values?.address?.street}
                 name="address.street"
+                error={errors.address?.street}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.address?.street && <div className="error">{errors.address?.street}</div>}
               <Input
                 label="City"
                 value={values?.address?.city}
                 name="address.city"
+                error={errors.address?.city}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.address?.city && <div className="error">{errors.address?.city}</div>}
               <Input
                 label="Zip code"
                 value={values?.address?.zipcode}
                 name="address.zipcode"
+                error={errors.address?.zipcode}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.address?.zipcode && <div className="error">{errors.address?.zipcode}</div>}
               <Input
                 label="Phone"
                 value={values.phone}
                 name="phone"
+                error={errors.phone}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.phone && <div className="error">{errors.phone}</div>}
               <Input
                 label="Website"
                 value={values.website}
                 name="website"
+                error={errors.website}
                 changeInputValue={handleChange}
                 isEditButtonClicked={isEditButtonClicked}
               />
-              {errors.website && <div className="error">{errors.website}</div>}
               <Comment
-                label="comment"
+                label="Comment"
                 value={values.comment}
                 name="comment"
                 changeInputValue={handleChange}

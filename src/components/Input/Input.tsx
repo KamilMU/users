@@ -1,5 +1,6 @@
-import { Field } from 'formik';
+import { Field, FormikErrors } from 'formik';
 import React from 'react';
+import { UserType } from '../../types';
 
 import './styles.scss';
 
@@ -8,11 +9,12 @@ interface Props {
   value: string;
   name: string;
   isEditButtonClicked: boolean;
+  error: string;
   changeInputValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function Input({
-  label, value, name, changeInputValue, isEditButtonClicked }: Props) {
+  label, value, name, changeInputValue, isEditButtonClicked, error }: Props) {
   return (
     <div className="user-field">
       <div>{label}</div>
@@ -22,8 +24,12 @@ export function Input({
         name={name}
         readOnly={!isEditButtonClicked}
         onChange={changeInputValue}
-        style={{ color: !isEditButtonClicked ? '#D5D5D5' : '#8C8C8C' }}
+        style={{
+          color: !isEditButtonClicked ? '#D5D5D5' : '#000000',
+          borderColor: error ? 'red' : '#D8D8D8'
+        }}
       />
+      {error && <div className="user-field__error">{error}</div>}
     </div>
   )
 };
