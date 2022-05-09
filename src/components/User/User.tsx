@@ -12,9 +12,9 @@ export function User({ user }: Props) {
   return (
     <div
       className="user-container">
-      <p className="">ФИО: {user?.name}</p>
-      <p className="">город: {user?.address.city}</p>
-      <p className="">компания: {user?.company.name}</p>
+      <p><span>ФИО:</span> {user?.name}</p>
+      <p><span>город:</span> {user?.address.city}</p>
+      <p><span>компания:</span> {user?.company.name}</p>
       <Link
         to={`/user/${user?.id}`}
         className="user-container__link">
